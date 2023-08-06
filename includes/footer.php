@@ -7,7 +7,7 @@
             <div class="card">
                 <h2>Get in touch</h2>
                 <p><i class='bx bx-map'></i> Narnaul, Haryana, In</p>
-                <p><i class='bx bx-phone'></i> 8310717303</p>
+                <p><i class='bx bx-phone'></i> 1234567890</p>
                 <p><i class='bx bx-envelope'></i> sharmahimanshu1611@gmail.com</p>
             </div>
             <div class="card">
