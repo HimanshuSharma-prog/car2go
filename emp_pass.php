@@ -3,23 +3,23 @@ include "./includes/header.php";
     if(isset($_POST['new_pass'])){
         $new_pass=md5($_POST['new_pass']);
         $conf_pass=md5($_POST['conf_pass']);
-        $u_id=$_POST['u_id'];
+        $emp_id=$_POST['emp_id'];
 
         if($new_pass==$conf_pass){
-            $sql="update users set u_pass='$conf_pass' where u_id='$u_id'";
+            $sql="update emp set emp_pass='$conf_pass' where emp_id='$emp_id'";
             $query=mysqli_query($conn,$sql);
             if($query){
                 echo "
                 <script>
                     alert('Password Updated succesfully')
-                    window.location.replace('./updatepas.php?u_id=$u_id')
+                    window.location.replace('./emp_pass.php?emp_id=$emp_id')
                 </script>
             ";
             }else{
                 echo "
                 <script>
                     alert('please try again..')
-                    window.location.replace('./updatepas.php?u_id=$u_id')
+                    window.location.replace('./emp_pass.php?emp_id=$emp_id')
                 </script>
             ";
             }
@@ -27,7 +27,7 @@ include "./includes/header.php";
             echo "
                 <script>
                     alert('Password did not match')
-                    window.location.replace('./updatepas.php?u_id=$u_id')
+                    window.location.replace('./emp_pass.php?emp_id=$emp_id')
                 </script>
             ";
         }
@@ -39,13 +39,13 @@ include "./includes/header.php";
 
 <div class="formDiv">
     <h2>Update Password</h2>
-    <form action="./updatepas.php" method="post">
+    <form action="./emp_pass.php" method="post">
         <?php
-        if (isset($_GET['u_id'])) {
-            $u_id = $_GET['u_id'];
+        if (isset($_GET['emp_id'])) {
+            $emp_id = $_GET['emp_id'];
 
             echo "
-            <input type='number' name='u_id' hidden value='$u_id'>
+            <input type='number' name='emp_id' hidden value='$emp_id'>
                     
                     ";
         }

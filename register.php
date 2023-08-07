@@ -10,25 +10,58 @@ if (isset($_POST['full_name'])) {
     // $conf_pass = md5($_POST['conf_pass']);
 
     $sql = "select * from users where u_email='$email'";
-        $query = mysqli_query($conn, $sql);
+    $query = mysqli_query($conn, $sql);
+    if ($query) {
         if (mysqli_num_rows($query) > 0) {
             echo "
-            <script>
-                alert('Email is already registered')
-            </script>
-        ";
+                <script>
+                    alert('Email is already registered')
+                </script>
+            ";
         } else {
-            $sql1 = "insert into users(u_name,u_email,u_phone,u_pass) values('$full_name','$email','$number','$pass')";
-            $query1 = mysqli_query($conn, $sql1);
+            if (is_numeric($number)) {
+                $sql1 = "insert into users(u_email,u_pass,u_name,u_phone) values ('" . $email . "','" . $pass . "','" . $full_name . "','" . $number . "')";
+                $query1 = mysqli_query($conn, $sql1);
 
-            if ($query1) {
+                if ($query1) {
+                    echo "
+                <script>
+                    alert('Registered successful')
+                </script>
+            ";
+                } else {
+                    echo "
+                <script>
+                    alert('something went wrong, please try again..')
+                </script>
+            ";
+                }
+            }else{
                 echo "
-            <script>
-                alert('Registered successful')
-            </script>
-        ";
+                <script>
+                    alert('Enter a valid phone number')
+                </script>
+            ";
             }
         }
+    } else {
+        $sql2 = $sql1 = "insert into users(u_email,u_pass,u_name,u_phone) values ('" . $email . "','" . $pass . "','" . $full_name . "','" . $number . "')";
+        $query2 = mysqli_query($conn, $sql2);
+
+        if ($query2) {
+            echo "
+                <script>
+                    alert('Registered successful')
+                </script>
+            ";
+        } else {
+            echo "
+            <script>
+                alert('something went wrong, please try again')
+            </script>
+        ";
+        }
+    }
 }
 
 ?>
@@ -38,7 +71,7 @@ if (isset($_POST['full_name'])) {
 <div class="formDiv">
     <h2>Register</h2>
     <p>Welcome to Car<span>2Go</span></p>
-    <form action="./register.php" method="post" enctype="multipart/form-data">
+    <form action="./register.php" method="post">
         <div class="inputDiv">
             <i class='bx bx-user'></i>
             <input type="text" name="full_name" placeholder="Full Name" required>
@@ -49,7 +82,7 @@ if (isset($_POST['full_name'])) {
         </div>
         <div class="inputDiv">
             <i class='bx bx-phone'></i>
-            <input type="number" name="number" placeholder="Phone No." required>
+            <input type="text" name="number" placeholder="Phone No." required>
         </div>
         <div class="inputDiv">
             <i class='bx bx-lock-alt'></i>

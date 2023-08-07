@@ -20,21 +20,23 @@ if (isset($_POST['emp_name'])) {
             </script>
         ";
         } else {
-            $sql1 = "insert into emp(emp_name,emp_agency,emp_email,emp_phone,emp_pass) values('$emp_name','$emp_agency','$emp_email','$emp_phone','$pass')";
-            $query1 = mysqli_query($conn,$sql1);
+            if (is_numeric($emp_phone)) {
+                $sql1 = "insert into emp(emp_name,emp_agency,emp_email,emp_phone,emp_pass) values('$emp_name','$emp_agency','$emp_email','$emp_phone','$pass')";
+                $query1 = mysqli_query($conn, $sql1);
 
-            if ($query1) {
-                echo "
-            <script>
-                alert('Registered successful..')
-            </script>
-        ";
-            } else {
-                echo "
-            <script>
-                alert('Try Again..')
-            </script>
-        ";
+                if ($query1) {
+                    echo "
+                <script>
+                    alert('Registered successful..')
+                </script>
+            ";
+                } else {
+                    echo "
+                <script>
+                    alert('Try Again..')
+                </script>
+            ";
+                }
             }
         }
     } else {
@@ -67,7 +69,7 @@ if (isset($_POST['emp_name'])) {
         </div>
         <div class="inputDiv">
             <i class='bx bx-phone'></i>
-            <input type="number" name="emp_phone" placeholder="Phone No." required>
+            <input type="text" name="emp_phone" placeholder="Phone No." required>
         </div>
         <div class="inputDiv">
             <i class='bx bx-lock-alt'></i>

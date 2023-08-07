@@ -5,24 +5,25 @@ if (isset($_POST['email'])) {
     $email = $_POST['email'];
     $full_name = $_POST['full_name'];
     $phone = $_POST['number'];
-    $u_id = $_POST['u_id'];
+    $emp_id = $_POST['emp_id'];
+    $emp_agency=$_POST['emp_agency'];
 
     if (is_numeric($phone)) {
-        $sql = "UPDATE users SET u_name='$full_name',u_email='$email',u_phone='$phone' WHERE u_id='$u_id'";
+        $sql = "update emp set emp_name='$full_name',emp_phone='$phone',emp_email='$email',emp_agency='$emp_agency' where emp_id='$emp_id'";
         $query = mysqli_query($conn, $sql);
 
         if ($query) {
             echo "
         <script>
             alert('Details update successfully')
-            window.location.replace('./updatedetails.php?u_id=$u_id')
+            window.location.replace('./emp_update.php?emp_id=$emp_id')
         </script>
     ";
         } else {
             echo "
         <script>
             alert('Some thing went wrong, try again')
-            window.location.replace('./updatedetails.php?u_id=$u_id')
+            window.location.replace('./emp_update.php?emp_id=$emp_id')
         </script>
     ";
         }
@@ -42,10 +43,14 @@ if (isset($_POST['email'])) {
 
 <div class="formDiv">
     <h2>Update Details</h2>
-    <form action="./updatedetails.php" method="post">
+    <form action="./emp_update.php" method="post">
         <div class="inputDiv">
             <i class='bx bx-user'></i>
             <input type="text" name="full_name" placeholder="Full Name" required>
+        </div>
+        <div class="inputDiv">
+            <i class='bx bx-car'></i>
+            <input type="text" name="emp_agency" placeholder="Agency Name" required>
         </div>
         <div class="inputDiv">
             <i class='bx bx-envelope'></i>
@@ -56,11 +61,11 @@ if (isset($_POST['email'])) {
             <input type="text" name="number" placeholder="Phone No." required>
         </div>
         <?php
-        if (isset($_GET['u_id'])) {
-            $u_id = $_GET['u_id'];
+        if (isset($_GET['emp_id'])) {
+            $emp_id = $_GET['emp_id'];
 
             echo "
-            <input type='number' name='u_id' hidden value='$u_id'>
+            <input type='number' name='emp_id' hidden value='$emp_id'>
                     
                     ";
         }

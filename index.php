@@ -99,13 +99,14 @@
                         $car_name=$row['car_name'];
                         $rent=$row['rent'];
                         $image=$row['image'];
+                        $car_cat=$row['car_cat'];
 
                         echo"
                         <div class='card'>
                         <img src='./assets/carimages/$image' alt='car'>
                         <h2>$car_comp $car_name</h2>
                         <p>₹ $rent/day</p>
-                        <a href='./details.php?car_id=$car_id' class='btn'>
+                        <a href='./details.php?car_id=$car_id&car_cat=$car_cat' class='btn'>
                             <i class='bx bx-car'></i>
                             <p>Reserve now</p>
                         </a>

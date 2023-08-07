@@ -31,7 +31,7 @@
                         </div>
                         </div>
                         <div class='cardDiv'>
-                            <a href='./updatedetails.php?emp_id=$emp_id' class='card'>
+                            <a href='./emp_update.php?emp_id=$emp_id' class='card'>
                                 <i class='bx bxs-user-detail'></i>
                                 <p>Update Account</p>
                             </a>
@@ -47,7 +47,7 @@
                                 <i class='bx bx-user' ></i>
                                 <p>Check Users</p>
                             </a>
-                            <a href='./updatepas.php?emp_id=$emp_id' class='card'>
+                            <a href='./emp_pass.php?emp_id=$emp_id' class='card'>
                                 <i class='bx bx-lock-alt' ></i>
                                 <p>Update Password</p>
                             </a>
