@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 06, 2023 at 03:49 PM
+-- Generation Time: Aug 07, 2023 at 04:41 AM
 -- Server version: 8.0.18
 -- PHP Version: 7.4.1
 
@@ -62,7 +62,7 @@ CREATE TABLE `emp` (
   `emp_email` varchar(2000) COLLATE utf8mb4_general_ci NOT NULL,
   `emp_agency` varchar(2000) COLLATE utf8mb4_general_ci NOT NULL,
   `emp_pass` varchar(2000) COLLATE utf8mb4_general_ci NOT NULL,
-  `emp_phone` int(100) NOT NULL
+  `emp_phone` varchar(100) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -70,8 +70,8 @@ CREATE TABLE `emp` (
 --
 
 INSERT INTO `emp` (`emp_id`, `emp_name`, `emp_email`, `emp_agency`, `emp_pass`, `emp_phone`) VALUES
-(1, 'test', 'test@gmail.com', 'test agency', 'e99a18c428cb38d5f260853678922e03', 12345689),
-(3, 'Manesh', 'balajicars@gmail.com', 'Balaji Cars', 'e99a18c428cb38d5f260853678922e03', 123456789);
+(1, 'test', 'test@gmail.com', 'test agency', 'e99a18c428cb38d5f260853678922e03', '12345689'),
+(3, 'Himanshu Sharma', 'sharmahimanshu1611@gmail.com', 'Balaji Cars', 'e99a18c428cb38d5f260853678922e03', '8950960268');
 
 -- --------------------------------------------------------
 
@@ -110,10 +110,10 @@ INSERT INTO `rent_cars` (`rent_id`, `u_id`, `car_id`, `emp_id`, `car_name`, `ima
 
 CREATE TABLE `users` (
   `u_id` int(100) NOT NULL,
-  `u_name` varchar(2000) COLLATE utf8mb4_general_ci NOT NULL,
-  `u_email` varchar(2000) COLLATE utf8mb4_general_ci NOT NULL,
-  `u_phone` int(100) NOT NULL,
-  `u_pass` varchar(2000) COLLATE utf8mb4_general_ci NOT NULL
+  `u_name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `u_email` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `u_phone` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `u_pass` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -121,9 +121,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`u_id`, `u_name`, `u_email`, `u_phone`, `u_pass`) VALUES
-(1, 'test', 'test@gmail.com', 1234567890, 'abc123'),
-(2, 'test', 'test1@gmail.com', 123456789, '900150983cd24fb0d6963f7d28e17f72'),
-(3, 'himanshu', 'himanshu@gmail.com', 1234567890, 'e99a18c428cb38d5f260853678922e03');
+(1, 'test', 'test@gmail.com', '1234567890', 'abc123'),
+(2, 'test', 'test1@gmail.com', '123456789', '900150983cd24fb0d6963f7d28e17f72'),
+(3, 'himanshu', 'himanshu@gmail.com', '1234567890', 'e99a18c428cb38d5f260853678922e03'),
+(4, 'Himanshu Sharma', 'sharmahimanshu1611@gmail.com', '6361720268', 'e99a18c428cb38d5f260853678922e03'),
+(5, 'himanshu sharma', 'sharma@gmail.com', '8950960268', 'a141c47927929bc2d1fb6d336a256df4'),
+(6, 'test', 'test2@gmail.com', '284687264823', 'e99a18c428cb38d5f260853678922e03');
 
 --
 -- Indexes for dumped tables
@@ -179,7 +182,7 @@ ALTER TABLE `rent_cars`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `u_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `u_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
