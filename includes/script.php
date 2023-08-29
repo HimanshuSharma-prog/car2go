@@ -78,6 +78,8 @@
             loginBtn.style.display = 'flex'
             userBtn.style.display = 'none'
             empBtn.style.display = 'none'
+              rentForm.style.display = 'none'
+                rentBtn.style.display = 'flex'
         }
 
         if (month < 10) {
