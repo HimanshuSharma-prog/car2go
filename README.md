@@ -21,7 +21,7 @@ This is the module who can rent a car and go through the UI of the website, ther
 
 This is module which is created for those who want to list there car on the website for providing them as a rent for the user, also there is employee dashboard available in the wbsite for easy maging the cars.
 
-Through the dashboard the employee can easily add cars and in future can easily update the details of cars and also account details.
+Through the dashboard agencies can easily add cars and in future can easily update the details of cars and also account details.
 
 # Login credentials
 
