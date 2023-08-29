@@ -26,6 +26,7 @@ Through the dashboard agencies can easily add cars and in future can easily upda
 # Login credentials
 
 For User Side
+!./assets/images/screen1.png
 
 email:himanshu@gmail.com
 pass:abc123
