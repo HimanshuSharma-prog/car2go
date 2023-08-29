@@ -17,7 +17,7 @@ These are the two main modules of this projects
 
 This is the module who can rent a car and go through the UI of the website, there is a user dashboard available for easily managing the details and rented cars.
 
-# Employee
+# Agencies
 
 This is module which is created for those who want to list there car on the website for providing them as a rent for the user, also there is employee dashboard available in the wbsite for easy maging the cars.
 
@@ -30,9 +30,9 @@ For User Side
 email:himanshu@gmail.com
 pass:abc123
 
-For Employee Side
+For Agencies Side
 
-Go to service section and click on register, than you find login for employee module
+Select Agencies from the menu bar or you can also got to services section and click on register now.
 
 email:test@gmail.com
 pass:abc123

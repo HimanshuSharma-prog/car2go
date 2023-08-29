@@ -1,5 +1,5 @@
 <?php
-include "./includes/header.php";
+include "./includes/agen_header.php";
 // include"./includes/db.php";
 if (isset($_POST['email'])) {
     $email = $_POST['email'];
@@ -16,14 +16,14 @@ if (isset($_POST['email'])) {
             echo "
         <script>
             alert('Details update successfully')
-            window.location.replace('./emp_update.php?emp_id=$emp_id')
+            window.location.replace('./agen_update.php?emp_id=$emp_id')
         </script>
     ";
         } else {
             echo "
         <script>
             alert('Some thing went wrong, try again')
-            window.location.replace('./emp_update.php?emp_id=$emp_id')
+            window.location.replace('./agen_update.php?emp_id=$emp_id')
         </script>
     ";
         }
@@ -43,7 +43,7 @@ if (isset($_POST['email'])) {
 
 <div class="formDiv">
     <h2>Update Details</h2>
-    <form action="./emp_update.php" method="post">
+    <form action="./agen_update.php" method="post">
         <div class="inputDiv">
             <i class='bx bx-user'></i>
             <input type="text" name="full_name" placeholder="Full Name" required>

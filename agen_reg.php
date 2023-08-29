@@ -1,5 +1,5 @@
 <?php
-include "./includes/header.php";
+include "./includes/agen_header.php";
 
 if (isset($_POST['emp_name'])) {
     $emp_name = $_POST['emp_name'];
@@ -54,7 +54,7 @@ if (isset($_POST['emp_name'])) {
 <div class="formDiv">
     <h2>Register for Agency</h2>
     <p>Welcome to Car<span>2Go</span></p>
-    <form action="./emp_reg.php" method="post" enctype="multipart/form-data">
+    <form action="./agen_reg.php" method="post" enctype="multipart/form-data">
         <div class="inputDiv">
             <i class='bx bx-user'></i>
             <input type="text" name="emp_name" placeholder="Full Name" required>
@@ -81,7 +81,7 @@ if (isset($_POST['emp_name'])) {
             <input type="password" name="conf_pass" placeholder="Confirm Password" required>
         </div>
         <input type="submit" value="Register" class="btn">
-        <p>Already have an account ? <a href="./emp_login.php">Login</a></p>
+        <p>Already have an account ? <a href="./agen_login.php">Login</a></p>
     </form>
 </div>
 

@@ -1,5 +1,5 @@
 <?php
-include "./includes/header.php";
+include "./includes/agen_header.php";
 
 if (isset($_POST['car_comp'])) {
     $car_comp = $_POST['car_comp'];
@@ -111,7 +111,7 @@ if (isset($_POST['car_comp'])) {
     window.addEventListener('load',()=>{
         const user=localStorage.getItem('user')
         if(!user){
-            window.location.replace('./emp_login.php');
+            window.location.replace('./agen_login.php');
         }
     })
 </script>

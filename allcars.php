@@ -1,5 +1,5 @@
 <?php
-include "./includes/header.php";
+include "./includes/agen_header.php";
 ?>
 <!-- form div -->
 <div class="magindiv" style="height: 100px;"></div>
@@ -35,9 +35,18 @@ include "./includes/header.php";
                 </div>
                     ";
                 }
+            }else{
+                echo "
+                <div class='errDiv'>
+                <img src='./assets/images/no_cars.png' alt='no_cars'>
+                <p>You have not listed any cars yet, first add cars.</p>
+                <a href='./addcars.php' class='btn'>Add Cars</a>
+            </div>
+                ";
             }
         }
         ?>
+       
         <!-- <div class="card">
             <img src="./assets/images/car3.webp" alt="car">
             <h2>Tata Nexon</h2>
@@ -119,7 +128,7 @@ include "./includes/header.php";
     window.addEventListener('load',()=>{
         const user=localStorage.getItem('user')
         if(!user){
-            window.location.replace('./emp_login.php');
+            window.location.replace('./agen_login.php');
         }
     })
 </script>

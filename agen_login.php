@@ -1,5 +1,5 @@
 <?php
-        include "./includes/header.php";
+        include "./includes/agen_header.php";
         if(isset($_POST['emp_email'])){
             $emp_email=$_POST['emp_email'];
             $emp_pass=md5($_POST['pass']);
@@ -21,7 +21,7 @@
                     localStorage.setItem('user', JSON.stringify(data));
                         alert('Login successful')
                         setTimeout(()=>{
-                            window.location.replace('index.php');
+                            window.location.replace('agencies.php');
                         },1000)
                     </script>
                 ";
@@ -41,7 +41,7 @@
     <div class="formDiv">
         <h2>Login for Agency</h2>
         <p>Welcome to Car<span>2Go</span></p>
-        <form action="./emp_login.php" method="post" enctype="multipart/form-data">
+        <form action="./agen_login.php" method="post" enctype="multipart/form-data">
             <div class="inputDiv">
                 <i class='bx bx-envelope' ></i>
                 <input type="email" name="emp_email" placeholder="Email" required>
@@ -51,7 +51,7 @@
                 <input type="password" name="pass" placeholder="Password" required>
             </div>
             <input type="submit" value="Login" class="btn">
-            <p>Don't have an account ? <a href="./emp_reg.php">Register</a></p>
+            <p>Don't have an account ? <a href="./agen_reg.php">Register</a></p>
         </form>
     </div>
     <?php

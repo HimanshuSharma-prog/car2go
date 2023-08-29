@@ -1,5 +1,5 @@
 <?php
-include "./includes/header.php";
+include "./includes/agen_header.php";
 ?>
 <!-- form div -->
 <div class="magindiv" style="height: 100px;"></div>
@@ -41,6 +41,13 @@ include "./includes/header.php";
                             ";
                         }
                     }
+                }else{
+                    echo "
+                <div class='errDiv'>
+                <img src='./assets/images/no_users.png' alt='no_cars'>
+                <p>No uers has rented your car at this time</p>
+            </div>
+                ";
                 }
             }
         ?>
@@ -68,7 +75,7 @@ include "./includes/header.php";
     window.addEventListener('load',()=>{
         const user=localStorage.getItem('user')
         if(!user){
-            window.location.replace('./emp_login.php');
+            window.location.replace('./agen_login.php');
         }
     })
 </script>

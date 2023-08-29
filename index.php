@@ -146,7 +146,7 @@
                 <h2>Become a part</h2>
                 <p>We provide to be a part of agencies, if you want to provide car services in your area tahn register
                     with Car<span>2Go</span> and extend your business</p>
-                <a href="./emp_login.php" class="btn">Register Now</a>
+                <a href="./agen_login.php" class="btn">Register Now</a>
             </div>
             <div class="card">
                 <img src="./assets/images/s1.png" alt="services">

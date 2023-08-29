@@ -1,5 +1,5 @@
 <?php
-include "./includes/header.php";
+include "./includes/agen_header.php";
 
 if (isset($_POST['car_name'])) {
     $car_comp = $_POST['car_comp'];
@@ -136,6 +136,7 @@ if (isset($_POST['car_name'])) {
         ";
     }
     ?>
+   
     <!-- <form action="./update_cars.php" method="post" enctype="multipart/form-data">
         <div class="inputDiv">
             <i class='bx bxs-business'></i>
@@ -187,7 +188,7 @@ if (isset($_POST['car_name'])) {
     window.addEventListener('load',()=>{
         const user=localStorage.getItem('user')
         if(!user){
-            window.location.replace('./emp_login.php');
+            window.location.replace('./agen_login.php');
         }
     })
 </script>

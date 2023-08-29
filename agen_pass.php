@@ -1,5 +1,5 @@
 <?php
-include "./includes/header.php";
+include "./includes/agen_header.php";
     if(isset($_POST['new_pass'])){
         $new_pass=md5($_POST['new_pass']);
         $conf_pass=md5($_POST['conf_pass']);
@@ -12,14 +12,14 @@ include "./includes/header.php";
                 echo "
                 <script>
                     alert('Password Updated succesfully')
-                    window.location.replace('./emp_pass.php?emp_id=$emp_id')
+                    window.location.replace('./agen_pass.php?emp_id=$emp_id')
                 </script>
             ";
             }else{
                 echo "
                 <script>
                     alert('please try again..')
-                    window.location.replace('./emp_pass.php?emp_id=$emp_id')
+                    window.location.replace('./agen_pass.php?emp_id=$emp_id')
                 </script>
             ";
             }
@@ -27,7 +27,7 @@ include "./includes/header.php";
             echo "
                 <script>
                     alert('Password did not match')
-                    window.location.replace('./emp_pass.php?emp_id=$emp_id')
+                    window.location.replace('./agen_pass.php?emp_id=$emp_id')
                 </script>
             ";
         }
@@ -39,7 +39,7 @@ include "./includes/header.php";
 
 <div class="formDiv">
     <h2>Update Password</h2>
-    <form action="./emp_pass.php" method="post">
+    <form action="./agen_pass.php" method="post">
         <?php
         if (isset($_GET['emp_id'])) {
             $emp_id = $_GET['emp_id'];

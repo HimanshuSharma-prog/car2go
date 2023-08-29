@@ -28,25 +28,23 @@
             </div>
             <div class="logo">
                 <img src="./assets/images/logo.png" alt="logo">
-                <a href="./index.php" class="titleDiv">
-                    <span class="title">Car</span>
-                    <span class="text">2Go</span>
+                <a href="./index.php" class="agen_titleDiv">
+                    <p class="title">Car<span>2GO</span></p>
+                    <p class="text">For Agency</p>
                     <!-- <span class="title">Go</span> -->
                 </a>
             </div>
             <div class="links">
                 <ul>
-                    <li><a href="index.php#homeDiv">Home</a></li>
-                    <li><a href="index.php#aboutDiv">About</a></li>
-                    <li><a href="index.php#carsDiv">Cars</a></li>
-                    <li><a href="index.php#servicesDiv">Services</a></li>
-                    <li><a href="index.php#contactDiv">Contact</a></li>
-                    <li><a href="agencies.php">Agencies</a></li>
+                    <li><a href="agencies.php#homeDiv">Home</a></li>
+                    <li><a href="agencies.php#serviceDiv">Services</a></li>
+                    <li><a href="agencies.php#howItDiv">How it Work</a></li>
+                    <li><a href="index.php">Main Site</a></li>
                 </ul>
             </div>
-            <a href="./login.php" class="btn" id="loginBtn">
+            <a href="./agen_login.php" class="btn agen_btn" id="loginBtn">
                 <i class='bx bx-user'></i>
-                <p>Login</p>
+                <p>Create Account</p>
             </a>
             <a href="../userdashboard.php" class="userBtn" id="userBtn">
                 <img src="./assets/images/photo8.jpg" alt="user">
@@ -61,12 +59,10 @@
 
     <div class="mobNav" id="mobNav">
         <ul>
-            <li><a href="index.php#homeDiv" onclick="hideNav()">Home</a></li>
-            <li><a href="index.php#aboutDiv" onclick="hideNav()">About</a></li>
-            <li><a href="index.php#carsDiv" onclick="hideNav()">Cars</a></li>
-            <li><a href="index.php#servicesDiv" onclick="hideNav()">Services</a></li>
-            <li><a href="index.php#contactDiv" onclick="hideNav()">Contact</a></li>
-            <li><a href="agencies.php">Agencies</a></li>
+            <li><a href="agencies.php#homeDiv" onclick="hideNav()">Home</a></li>
+            <li><a href="agencies.php#serviceDiv" onclick="hideNav()">Services</a></li>
+            <li><a href="agencies.php#howItDiv" onclick="hideNav()">How it Work</a></li>
+            <li><a href="index.php" onclick="hideNav()">Main Site</a></li>
         </ul>
     </div>
 

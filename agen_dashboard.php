@@ -1,5 +1,5 @@
 <?php
-        include "./includes/header.php";
+        include "./includes/agen_header.php";
     ?>
     <div class="magindiv" style="height: 90px;"></div>
 
@@ -31,7 +31,7 @@
                         </div>
                         </div>
                         <div class='cardDiv'>
-                            <a href='./emp_update.php?emp_id=$emp_id' class='card'>
+                            <a href='./agen_update.php?emp_id=$emp_id' class='card'>
                                 <i class='bx bxs-user-detail'></i>
                                 <p>Update Account</p>
                             </a>
@@ -47,7 +47,7 @@
                                 <i class='bx bx-user' ></i>
                                 <p>Check Users</p>
                             </a>
-                            <a href='./emp_pass.php?emp_id=$emp_id' class='card'>
+                            <a href='./agen_pass.php?emp_id=$emp_id' class='card'>
                                 <i class='bx bx-lock-alt' ></i>
                                 <p>Update Password</p>
                             </a>
@@ -98,7 +98,7 @@
     window.addEventListener('load',()=>{
         const user=localStorage.getItem('user')
         if(!user){
-            window.location.replace('./emp_login.php');
+            window.location.replace('./agen_login.php');
         }
     })
 </script>

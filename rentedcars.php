@@ -40,6 +40,14 @@
                         </div>
                             ";
                         }
+                    }else{
+                        echo "
+                <div class='errDiv'>
+                <img src='./assets/images/no_cars.png' alt='no_cars'>
+                <p>You have not rented any cars at this time.</p>
+                <a href='./cars.php' class='btn'>Rent a car</a>
+            </div>
+                ";
                     }
                 }
             ?>

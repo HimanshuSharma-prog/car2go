@@ -12,7 +12,7 @@
             </div>
             <div class="card">
                 <h2>Useful links</h2>
-                <a href="#">Become a part</a>
+                <a href="agencies.php">Agencies</a>
                 <a href="index.php#aboutDiv">About</a>
                 <a href="index.php#carsDiv">Cars</a>
                 <a href="index.php#servicesDiv">Services</a>

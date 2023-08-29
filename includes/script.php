@@ -69,7 +69,7 @@
                 loginBtn.style.display = 'none'
                 empBtn.style.display = 'flex'
                 userBtn.style.display = 'none'
-                empBtn.setAttribute('href', `./emp_dashboard.php?emp_id=${_user.u_id}`)
+                empBtn.setAttribute('href', `./agen_dashboard.php?emp_id=${_user.u_id}`)
                 rentForm.style.display = 'none'
                 rentBtn.style.display = 'flex'
             }
