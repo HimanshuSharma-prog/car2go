@@ -26,7 +26,7 @@ Through the dashboard agencies can easily add cars and in future can easily upda
 # Login credentials
 
 For User Side
-!./assets/images/screen1.png
+![User login](https://github.com/HimanshuSharma-prog/car2go/blob/master/assets/images/screen1.png)
 
 email:himanshu@gmail.com
 pass:abc123
