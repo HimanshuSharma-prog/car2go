@@ -9,7 +9,7 @@ This is a Online website for rent a car the ui is easy and simple to use
 # Modules in this website
 
 1. User
-2. Employee
+2. Agencies
 
 These are the two main modules of this projects
 
