@@ -42,10 +42,7 @@ Select Agencies from the menu bar or you can also got to services section and cl
 
 ![agency login](https://github.com/HimanshuSharma-prog/car2go/blob/master/assets/images/screen4.png)
 
-
-
-
-email:test@gmail.com
+email:balajicars@gmail.com
 pass:abc123
 
 
